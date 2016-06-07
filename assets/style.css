@@ -1,3 +1,7 @@
+html{
+    position: relative;
+    min-height: 100%;
+}
 body{
     background-color: #FAFAFA;
     width: 100%;
@@ -7,13 +11,35 @@ body{
 header{
     border-top: 3px solid #4CAF50;
 }
+footer{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+footer ul li{
+    display: inline-block;
+    padding: 5px;
+}
+footer ul li a{
+    color: #1C9963;
+}
+footer ul li a:hover{
+    color: #02B875;
+    text-decoration: none;
+}
 canvas{
     position: absolute;
     height: 100%;
     top: 0;
 }
+.font-size-14{
+    font-size: 14px;
+}
 .margin-top-10{
     margin-top: 10px;
+}
+.margin-right-10{
+    margin-right: 10px;
 }
 .future-block{
     margin-top: 300px;
@@ -25,4 +51,11 @@ canvas{
 .future-btn:hover{
     border-color: #1C9963;
     color: #02B875;
+    transition: all 5ms linear 0ms;
+    box-shadow: inset 0 0 2px #02B875;
+}
+@media (width: 544px) {
+    .future-block{
+        margin-top: 100px;
+    }
 }
