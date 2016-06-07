@@ -1,0 +1,21 @@
+body{
+    background-color: #FAFAFA;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+header{
+    border-top: 3px solid #4CAF50;
+}
+canvas{
+    position: absolute;
+    height: 100%;
+    top: 0;
+}
+.future-block{
+    margin-top: 300px;
+}
+.future-btn{
+    border: 1px solid #02B875;
+    color: #1C9963;
+}
