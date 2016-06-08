@@ -47,12 +47,14 @@ canvas{
 .future-btn{
     border: 1px solid #02B875;
     color: #1C9963;
+    opacity: 0.5;
 }
 .future-btn:hover{
+    transition: all 5ms linear 0ms;
     border-color: #1C9963;
     color: #02B875;
-    transition: all 5ms linear 0ms;
     box-shadow: inset 0 0 2px #02B875;
+    opacity: 1;
 }
 @media (width: 544px) {
     .future-block{
