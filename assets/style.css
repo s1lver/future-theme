@@ -56,6 +56,88 @@ canvas{
     box-shadow: inset 0 0 2px #02B875;
     opacity: 1;
 }
+@-webkit-keyframes spinnerDotsRotate{
+    100%{
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes spinnerDotsRotate{
+    100%{
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes spinnerDotsBounce{
+    0%,100%{
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    50%{
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+@keyframes spinnerDotsBounce{
+    0%,100%{
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    50%{
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+.page-loading{
+    overflow: hidden;
+}
+.page-load>div>div{
+    margin: 0 auto;
+}
+.page-load{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    background-color: rgba(255,255,255,.99);
+    z-index: 99999;
+    display: table
+}
+.page-load>div{
+    display: table-cell;
+    vertical-align: middle;
+}
+.spinner-dots{
+    width: 25px;
+    height: 25px;
+    position: relative;
+    text-align: center;
+    -webkit-animation: spinnerDotsRotate 2s infinite linear;
+    animation: spinnerDotsRotate 2s infinite linear
+}
+.spinner-dots .spinner-child{
+    width: 60%;
+    height: 60%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    border-radius: 100%;
+    background-color: #1C9963;
+    -webkit-animation: spinnerDotsBounce 2s infinite ease-in-out;
+    animation: spinnerDotsBounce 2s infinite ease-in-out
+}
+.spinner-dots .spinner-dot2{
+    top: auto;
+    bottom: 0;
+    -webkit-animation-delay: -1s;
+    animation-delay: -1s
+}
+.center-block{
+    display: block;
+    margin-right: auto;
+    margin-left: auto
+}
 @media (width: 544px) {
     .future-block{
         margin-top: 100px;

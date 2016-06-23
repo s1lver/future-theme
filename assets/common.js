@@ -267,5 +267,19 @@ var trans = {
         }.bind(this));
     };
     var app = new Build();
+
+    function preLoader() {
+        $(window).on("load", function() {
+            if ($("body > .page-load").length) {
+                if ($("body").hasClass("page-loaded")) {
+                    return;
+                }
+                $("body").addClass("page-loaded").removeClass("page-loading");
+                $("body > .page-load").fadeOut()
+            }
+        });
+    }
+
     app.run();
+    preLoader();
 })();
