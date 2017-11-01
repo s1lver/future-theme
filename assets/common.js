@@ -172,7 +172,6 @@ var trans = {
         this.rotObj = {x: 0,y: 0,z: 0};
         this.objSz = {x: w / 5,y: h / 5,z: w / 5};
     };
-
     Build.prototype.add = function() {
         this.varr.push(new threeD({
             vtx: {x: rnd(),y: rnd(),z: rnd()},
@@ -190,12 +189,10 @@ var trans = {
             z: 360 * Math.random()
         });
     };
-
     Build.prototype.upd = function() {
         cam.obj.x += (this.toX - cam.obj.x) * 0.05;
         cam.obj.y += (this.toY - cam.obj.y) * 0.05;
     };
-
     Build.prototype.draw = function() {
         this.$.clearRect(0, 0, this.canvas.width, this.canvas.height);
         cam.upd();
@@ -246,7 +243,6 @@ var trans = {
         }.bind(this);
         window.requestAnimationFrame(anim);
     };
-
     Build.prototype.run = function() {
         this.anim();
 
@@ -268,17 +264,22 @@ var trans = {
     };
     var app = new Build();
 
-    function preLoader() {
-        $(window).on("load", function() {
-            if ($("body > .page-load").length) {
-                if ($("body").hasClass("page-loaded")) {
-                    return;
-                }
-                $("body").addClass("page-loaded").removeClass("page-loading");
-                $("body > .page-load").fadeOut()
-            }
-        });
-    }
+  /**
+   * Splash screen
+   */
+  function preLoader() {
+    $(window).on("load", function() {
+      let body = $('body'),
+          pageLoad = $("body > .page-load");
+        if (pageLoad.length) {
+          if (body.hasClass("page-loaded")) {
+              return;
+          }
+          body.addClass("page-loaded").removeClass("page-loading");
+          pageLoad.fadeOut()
+        }
+    });
+  }
 
     app.run();
     preLoader();
