@@ -8,10 +8,19 @@ body{
     margin: 0;
     overflow: hidden;
 }
+.container {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+}
+article {
+	grid-column: span 8;
+}
 header{
+	grid-column: span 12;
     border-top: 3px solid #4CAF50;
 }
 footer{
+	grid-column: span 12;
     position: absolute;
     width: 100%;
     bottom: 0;
@@ -35,6 +44,9 @@ canvas{
 .font-size-14{
     font-size: 14px;
 }
+.box-center{
+	margin: 0 auto;
+}
 .margin-top-10{
     margin-top: 10px;
 }
@@ -45,6 +57,7 @@ canvas{
     margin-top: 300px;
 }
 .future-btn{
+	display: block;
     border: 1px solid #02B875;
     color: #1C9963;
     opacity: 0.5;
@@ -56,6 +69,7 @@ canvas{
     box-shadow: inset 0 0 2px #02B875;
     opacity: 1;
 }
+/*Spinner*/
 @-webkit-keyframes spinnerDotsRotate{
     100%{
         -webkit-transform: rotate(360deg);
