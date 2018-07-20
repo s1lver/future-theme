@@ -8,12 +8,16 @@ body{
     margin: 0;
     overflow: hidden;
 }
+h1{
+	font-size: 60px;
+	text-transform: uppercase;
+}
 .container {
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 }
 article {
-	grid-column: span 8;
+	grid-column: span 12;
 }
 header{
 	grid-column: span 12;
@@ -55,12 +59,17 @@ canvas{
 }
 .future-block{
     margin-top: 300px;
+	display: grid;
+	grid-column: span 2;
 }
 .future-btn{
 	display: block;
     border: 1px solid #02B875;
     color: #1C9963;
     opacity: 0.5;
+	padding: 10px;
+	text-decoration: none;
+	text-transform: uppercase;
 }
 .future-btn:hover{
     transition: all 5ms linear 0ms;
