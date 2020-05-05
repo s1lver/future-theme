@@ -19,50 +19,53 @@ h1 {
 article {
     grid-column: span 12;
 }
-header{
+header {
     grid-column: span 12;
     border-top: 3px solid #4CAF50;
 }
-footer{
+footer {
     grid-column: span 12;
     position: absolute;
     width: 100%;
     bottom: 0;
 }
-footer ul li{
+footer ul li {
     display: inline-block;
     padding: 5px;
 }
-footer ul li a{
+footer ul li a {
     color: #1C9963;
 }
-footer ul li a:hover{
+footer ul li a:hover {
     color: #02B875;
     text-decoration: none;
 }
-canvas{
+canvas {
     position: absolute;
     height: 100%;
     top: 0;
+    z-index: 1;
 }
-.font-size-14{
+.font-size-14 {
     font-size: 14px;
 }
-.box-center{
+.box-center {
     margin: 0 auto;
 }
-.margin-top-10{
+.margin-top-10 {
     margin-top: 10px;
 }
-.margin-right-10{
+.margin-right-10 {
     margin-right: 10px;
 }
-.future-block{
-    margin-top: 200px;
+.future-block {
     display: grid;
+    position: relative;
+    margin-top: 200px;
     grid-column: span 2;
+    z-index: 10;
 }
-.future-btn{
+.future-btn {
     display: block;
     border: 1px solid #02B875;
     color: #1C9963;
@@ -71,7 +74,7 @@ canvas{
     text-decoration: none;
     text-transform: uppercase;
 }
-.future-btn:hover{
+.future-btn:hover {
     transition: all 5ms linear 0ms;
     border-color: #1C9963;
     color: #02B875;
@@ -79,45 +82,45 @@ canvas{
     opacity: 1;
 }
 /*Spinner*/
-@-webkit-keyframes spinnerDotsRotate{
-    100%{
+@-webkit-keyframes spinnerDotsRotate {
+    100% {
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
     }
 }
-@keyframes spinnerDotsRotate{
-    100%{
+@keyframes spinnerDotsRotate {
+    100% {
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
     }
 }
-@-webkit-keyframes spinnerDotsBounce{
-    0%,100%{
+@-webkit-keyframes spinnerDotsBounce {
+    0%,100% {
         -webkit-transform: scale(0);
         transform: scale(0);
     }
-    50%{
+    50% {
         -webkit-transform: scale(1);
         transform: scale(1);
     }
 }
-@keyframes spinnerDotsBounce{
-    0%,100%{
+@keyframes spinnerDotsBounce {
+    0%,100% {
         -webkit-transform: scale(0);
         transform: scale(0);
     }
-    50%{
+    50% {
         -webkit-transform: scale(1);
         transform: scale(1);
     }
 }
-.page-loading{
+.page-loading {
     overflow: hidden;
 }
-.page-load>div>div{
+.page-load>div>div {
     margin: 0 auto;
 }
-.page-load{
+.page-load {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -127,11 +130,11 @@ canvas{
     z-index: 99999;
     display: table
 }
-.page-load>div{
+.page-load>div {
     display: table-cell;
     vertical-align: middle;
 }
-.spinner-dots{
+.spinner-dots {
     width: 25px;
     height: 25px;
     position: relative;
@@ -139,7 +142,7 @@ canvas{
     -webkit-animation: spinnerDotsRotate 2s infinite linear;
     animation: spinnerDotsRotate 2s infinite linear
 }
-.spinner-dots .spinner-child{
+.spinner-dots .spinner-child {
     width: 60%;
     height: 60%;
     display: inline-block;
@@ -150,19 +153,19 @@ canvas{
     -webkit-animation: spinnerDotsBounce 2s infinite ease-in-out;
     animation: spinnerDotsBounce 2s infinite ease-in-out
 }
-.spinner-dots .spinner-dot2{
+.spinner-dots .spinner-dot2 {
     top: auto;
     bottom: 0;
     -webkit-animation-delay: -1s;
     animation-delay: -1s
 }
-.center-block{
+.center-block {
     display: block;
     margin-right: auto;
     margin-left: auto
 }
 @media (width: 544px) {
-    .future-block{
+    .future-block {
         margin-top: 100px;
     }
 }
