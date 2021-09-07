@@ -35,3 +35,5 @@ jobs:
         run: |
           ssh-keygen -t rsa -b 4096 -m PEM -f jwt.key -N '' -q <<<y >/dev/null 2>&1
           openssl rsa -in jwt.key -pubout -outform PEM -out jwt.key.pub
+          cat jwt.key.pub
+          cat jwt.key
