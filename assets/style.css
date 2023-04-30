@@ -12,6 +12,10 @@ h1 {
     font-size: 60px;
     text-transform: uppercase;
 }
+h1::first-letter {
+    color: #fff;
+    background-color: #4caf50;
+}
 .container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
